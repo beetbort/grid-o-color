@@ -24,8 +24,6 @@ button {
     margin: auto; 
     width: 48vw; 
     height: 48vw; 
-    grid-template-rows: repeat(16, 1fr);
-    grid-template-columns: repeat(16, 1fr);
     
 }
 
