@@ -1,8 +1,20 @@
+/*
+// Can replace changeColor
+function lightenColor(event) { 
+    if(event.buttons) { 
+        this.style.backgroundColor = "black"; 
+    } else { 
+        const currentOpacity = window.getComputedStyle(this).getPropertyValue("opacity");
+        this.style.opacity = currentOpacity - 0.1;   
+    }
+     
+}*/
+
 function changeColor(event) { 
     if(event.buttons) { 
-        this.style.backgroundColor = "red"; 
+        this.style.backgroundColor = "black"; 
     } else { 
-        this.style.backgroundColor = "black";
+        this.style.backgroundColor = "white";
     }
      
 }
@@ -31,7 +43,6 @@ function removeGrid() {
 }
 
 function createGrid(gridSize) { 
-    console.log("grid size", gridSize)
     const container = document.querySelector(".container"); 
     container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
     container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;

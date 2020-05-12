@@ -28,6 +28,7 @@ button {
 }
 
 .container div { 
-    background-color: red;
+    background-color: black;
+    opacity: 1; 
     margin: 0.5px; 
 }
