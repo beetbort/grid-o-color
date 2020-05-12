@@ -1,4 +1,4 @@
-
+/*
 // Can replace changeColor
 function lightenColor(event) { 
     if(event.buttons) { 
@@ -8,6 +8,25 @@ function lightenColor(event) {
         this.style.opacity = currentOpacity - 0.1;   
     }
      
+}
+*/
+
+/*
+// Can replace changeColor
+// Colors form schemecolor.com Dreamy Unicorn
+function changeColorUnicorn(event) { 
+    const RAINBOW = ["#C9B1FF", "#FFCAF2", "#FFB2B1", "#FFF3AD", "#BCFFBC", "#A2EDFF"];
+    if(event.buttons) { 
+        this.style.backgroundColor = "black"; 
+    } else { 
+        this.style.backgroundColor = RAINBOW[getRandomInt(0,RAINBOW.length - 1)];
+    }
+     
+}
+*/
+
+function getRandomInt(min, max) { 
+    return Math.floor(Math.random() * (max - min + 1) + min); 
 }
 
 function changeColor(event) { 
@@ -52,7 +71,7 @@ function createGrid(gridSize) {
     } 
 
     const divs = document.querySelectorAll(".container div");
-    divs.forEach(div => div.addEventListener("mouseover", lightenColor));
+    divs.forEach(div => div.addEventListener("mouseover", changeColor));
 }
 
 function setupButtonListener() { 
