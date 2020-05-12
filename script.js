@@ -1,14 +1,14 @@
-/*
+
 // Can replace changeColor
 function lightenColor(event) { 
     if(event.buttons) { 
-        this.style.backgroundColor = "black"; 
+        this.style.opacity = 1; 
     } else { 
         const currentOpacity = window.getComputedStyle(this).getPropertyValue("opacity");
         this.style.opacity = currentOpacity - 0.1;   
     }
      
-}*/
+}
 
 function changeColor(event) { 
     if(event.buttons) { 
@@ -52,7 +52,7 @@ function createGrid(gridSize) {
     } 
 
     const divs = document.querySelectorAll(".container div");
-    divs.forEach(div => div.addEventListener("mouseover", changeColor));
+    divs.forEach(div => div.addEventListener("mouseover", lightenColor));
 }
 
 function setupButtonListener() { 
